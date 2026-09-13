@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Zarry AI - Discord AI Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .discord-info {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .discord-info h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #5865F2;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(88, 101, 242, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9ff;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .legal-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .legal-section h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .legal-section h3:first-child {
+            margin-top: 0;
+        }
+
+        .legal-section p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .legal-section li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .features h2,
+            .discord-info h2 {
+                font-size: 1.4em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 30px 15px;
+                margin-bottom: 20px;
+            }
+
+            .features,
+            .discord-info,
+            .legal-section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            footer {
+                padding: 20px;
+            }
+
+            footer a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👑 King Zarry AI</h1>
+            <p class="tagline">Powerful AI interactions for Discord</p>
+        </header>
+
+        <div class="features">
+            <h2>What is King Zarry AI?</h2>
+            <p>King Zarry AI is an advanced Discord application powered by artificial intelligence. It processes your requests and delivers intelligent responses, media generation, and creative capabilities right within your Discord server.</p>
+            <p style="margin-top: 15px;">With state-of-the-art AI models, King Zarry AI can engage in meaningful conversations, process complex prompts, analyze images, and generate AI-powered media on demand.</p>
+        </div>
+
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li><strong>AI Conversations</strong> - Intelligent text-based interactions with advanced language models</li>
+                <li><strong>Text Prompt Processing</strong> - Convert your ideas into creative outputs</li>
+                <li><strong>Image Analysis</strong> - Upload and process images for advanced analysis and manipulation</li>
+                <li><strong>AI Media Generation</strong> - Generate videos and multimedia content from text descriptions or images</li>
+                <li><strong>Discord Integration</strong> - Seamless slash commands and Discord server integration</li>
+                <li><strong>Fast Processing</strong> - Optimized performance for quick responses</li>
+            </ul>
+        </div>
+
+        <div class="discord-info">
+            <h2>Add to Your Discord Server</h2>
+            <p>Invite King Zarry AI to your Discord server and start exploring AI-powered features immediately. The bot uses Discord slash commands for easy access to all features.</p>
+            <div class="cta-buttons">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=0&scope=bot%20applications.commands" class="btn btn-primary">Add King Zarry AI to Discord</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.95em; color: #666;"><em>Note: Replace YOUR_CLIENT_ID with your bot's actual Client ID from the Discord Developer Portal.</em></p>
+        </div>
+
+        <div class="features">
+            <h2>Legal &amp; Compliance</h2>
+            <p>Please review our policies before using King Zarry AI:</p>
+            <div class="cta-buttons" style="margin-top: 20px;">
+                <a href="/terms" class="btn btn-secondary">Terms of Service</a>
+                <a href="/privacy" class="btn btn-secondary">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">👑 King Zarry AI</div>
+            <div class="footer-links">
+                <a href="/terms">Terms of Service</a>
+                <span style="opacity: 0.5;">|</span>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <p style="font-size: 0.9em; opacity: 0.8; margin-top: 15px;">&copy; 2024 King Zarry AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
