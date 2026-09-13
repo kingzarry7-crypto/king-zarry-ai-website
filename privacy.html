@@ -170,7 +170,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
 
         <header>
             <h1>Privacy Policy</h1>
@@ -179,7 +179,7 @@
 
         <div class="legal-content">
             <h2>1. Introduction</h2>
-            <p>King Zarry AI ("we", "us", "our", or "the Bot") is committed to protecting your privacy. This Privacy Policy explains what information we process when you use the Bot, why we process it, and how we handle it.</p>
+            <p>King Zarry AI ("we", "us", "our", or "the Bot") is committed to protecting your privacy. This Privacy Policy explains what information we process when you use the Bot, why we process it, and how we handle it. Please read this policy carefully.</p>
 
             <h2>2. What Information We Process</h2>
             <p>When you use King Zarry AI, we process the following types of information:</p>
@@ -221,36 +221,45 @@
             </ul>
 
             <h2>4. Third-Party Services and Data Transmission</h2>
-            <p>To provide its functionality, King Zarry AI transmits certain information to third-party AI and media providers:</p>
+            <p>To provide its functionality, King Zarry AI transmits certain information to third-party AI and media providers as needed:</p>
 
             <h3>Discord</h3>
-            <p>Your Discord user ID and username are processed by Discord as part of normal bot operation. See Discord's Privacy Policy for details.</p>
+            <p>Your Discord user ID and username are processed by Discord as part of normal bot operation. See Discord's Privacy Policy for details on how Discord handles this data.</p>
 
             <h3>Groq (Language Model Processing)</h3>
-            <p>When you submit text prompts or request image analysis, your text and image data may be transmitted to Groq's servers for processing by their language models. Groq processes this data according to their Terms of Service and Privacy Policy.</p>
+            <p>When you submit text prompts or request image analysis, your text and image data may be transmitted to Groq's servers for processing by their language models. Groq processes this data according to their own privacy policy and terms of service. We recommend reviewing Groq's privacy documentation for details on their data handling practices.</p>
 
             <h3>Hugging Face (Media Generation)</h3>
-            <p>When you request video or media generation, your text prompts and uploaded images are transmitted to Hugging Face for processing and generation. Hugging Face processes this data according to their Terms of Service and Privacy Policy.</p>
+            <p>When you request video or media generation, your text prompts and uploaded images are transmitted to Hugging Face for processing and generation. Hugging Face processes this data according to their own privacy policy and terms of service. We recommend reviewing Hugging Face's privacy documentation to understand how they handle your data.</p>
 
             <h2>5. Data Retention and Deletion</h2>
-            <p>The King Zarry AI Bot does not persistently store your content by default. Here's what happens to your data:</p>
+            <p>King Zarry AI uses a combination of temporary processing and persistent storage for operational purposes. Here's what happens to your data:</p>
+            
+            <h3>Temporary Data Processing</h3>
             <ul>
-                <li><strong>Text Prompts:</strong> Processed in-memory during request execution; not permanently stored by the Bot itself</li>
-                <li><strong>Uploaded Images:</strong> Processed during the request; temporary copies may be created for processing, then deleted</li>
-                <li><strong>Generated Media:</strong> Video and media files are generated on-demand and sent to Discord; temporary files are cleaned up after transmission</li>
-                <li><strong>Command Logs:</strong> Basic execution logs may be maintained for error diagnosis and service improvement, but are not indefinitely retained</li>
-                <li><strong>Third-Party Processing:</strong> Third-party services (Groq, Hugging Face) have their own data retention policies; refer to their documentation for details on how long they retain processed data</li>
+                <li><strong>Text Prompts:</strong> May be processed in-memory during request execution; temporary copies may be retained during processing</li>
+                <li><strong>Uploaded Images:</strong> Temporary copies may be created for processing; these temporary files are cleaned up after the request completes</li>
+                <li><strong>Generated Media:</strong> Video and media files are generated on-demand and sent to Discord; temporary processing files are cleaned up after transmission</li>
             </ul>
-            <p><strong>Important:</strong> While the Bot itself does not permanently store your content, the third-party services used for processing may retain copies according to their own policies. You should review their privacy policies directly.</p>
+
+            <h3>Persistent Storage</h3>
+            <ul>
+                <li><strong>Discord User IDs and Usernames:</strong> May be retained in logs and databases for account association and service functionality</li>
+                <li><strong>Command History and Logs:</strong> Records of commands executed, timestamps, and parameters may be retained for error diagnosis, service improvement, and compliance purposes</li>
+                <li><strong>Persistent Memory/User Context:</strong> Where applicable, the Bot may maintain persistent memory of user interactions, preferences, or conversation history to improve service functionality</li>
+                <li><strong>Error Logs and Metadata:</strong> Technical logs related to errors, API requests, and system performance may be retained for debugging and service optimization</li>
+            </ul>
+
+            <p><strong>Important:</strong> Specific retention periods are not guaranteed. Data may be retained for as long as necessary to provide service, comply with legal obligations, or for legitimate operational purposes. Third-party services (Groq, Hugging Face) have their own data retention policies; refer to their documentation for details on how long they retain your data after processing.</p>
 
             <h2>6. Data Security</h2>
             <p>We take reasonable measures to protect your data, including:</p>
             <ul>
-                <li>Encrypted transmission of data to third-party services</li>
+                <li>Secure transmission of data to third-party services</li>
                 <li>Secure handling of API credentials and tokens</li>
-                <li>Immediate deletion of temporary files after processing</li>
+                <li>Cleanup of temporary processing files after use</li>
             </ul>
-            <p>However, no system is completely secure. We cannot guarantee absolute security of your data when transmitted to third parties.</p>
+            <p>However, no system is completely secure. We cannot guarantee absolute security of your data, particularly when transmitted to third parties or processed by external AI providers.</p>
 
             <h2>7. Your Rights</h2>
             <p>Regarding your data:</p>
@@ -262,10 +271,10 @@
             <p>To exercise these rights or request information, please contact us through Discord or GitHub.</p>
 
             <h2>8. Children's Privacy</h2>
-            <p>The Bot is not intended for users under 13 years of age. We do not knowingly collect information from children under 13. If we become aware that a child under 13 is using the Bot, we will take appropriate action.</p>
+            <p>The Bot is not intended for users under 13 years of age. We do not knowingly collect information from children under 13. If we become aware that a child under 13 is using the Bot, we will take appropriate steps to remove their information and restrict their access.</p>
 
             <h2>9. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page. Your continued use of the Bot following any changes constitutes your acceptance of the updated policy.</p>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page. Your continued use of the Bot following any changes constitutes your acceptance of the updated privacy policy.</p>
 
             <h2>10. Contact Us</h2>
             <p>If you have questions about this Privacy Policy or how we handle your data, please contact us:</p>
@@ -275,10 +284,10 @@
             </ul>
 
             <h2>11. Third-Party Links and Services</h2>
-            <p>This Privacy Policy applies only to King Zarry AI. If you access third-party services through our Bot (Discord, Groq, Hugging Face, etc.), their privacy policies govern how they handle your data. We are not responsible for their privacy practices.</p>
+            <p>This Privacy Policy applies only to King Zarry AI. If you access third-party services through our Bot (Discord, Groq, Hugging Face, etc.), their privacy policies govern how they handle your information. We are not responsible for their privacy practices and recommend reviewing their policies independently.</p>
 
             <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #666;">
-                <strong>Last Updated:</strong> September 2024
+                <strong>Last Updated:</strong> September 2026
             </p>
         </div>
     </div>
@@ -287,11 +296,11 @@
         <div class="footer-content">
             <div class="footer-brand">👑 King Zarry AI</div>
             <div class="footer-links">
-                <a href="/terms">Terms of Service</a>
+                <a href="terms.html">Terms of Service</a>
                 <span style="opacity: 0.5;">|</span>
-                <a href="/privacy">Privacy Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
-            <p style="font-size: 0.9em; opacity: 0.8; margin-top: 15px;">&copy; 2024 King Zarry AI. All rights reserved.</p>
+            <p style="font-size: 0.9em; opacity: 0.8; margin-top: 15px;">&copy; 2026 King Zarry AI. All rights reserved.</p>
         </div>
     </footer>
 </body>
